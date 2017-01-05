@@ -1,1 +1,10 @@
-﻿
+﻿body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+.tab-pane {
+    height: 400px;
+    overflow-y: scroll;
+    width: 100%;
+}
