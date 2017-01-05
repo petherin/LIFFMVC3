@@ -1,17 +1,17 @@
-﻿using System;
+﻿using LIFF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace LIFF.Model
+namespace LIFF.Web.ViewModels
 {
-    public class ImagePath
+    public class ImagePathViewModel
     {
         public int ImagePathId { get; set; }
         public string Path { get; set; }
 
         //Navigation properties
-       // public virtual List<Film> Films { get; set; }
+      //  public virtual List<FilmViewModel> Films { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace LIFF.Model
     {
         public int CountryId { get; set; }
         public string Name { get; set; }
-
+        
         //Navigation properties
         public virtual List<Film> Films { get; set; }
     }
