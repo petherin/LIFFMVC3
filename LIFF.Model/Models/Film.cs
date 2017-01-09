@@ -15,18 +15,17 @@ namespace LIFF.Model
         public string TrailerURL { get; set; }
         public int RunningTime { get; set; }
         public bool Subtitles { get; set; }
+        public string Certificate { get; set; }
+        public virtual List<ImagePath> Images { get; set; }
 
         //Foreign keys
-        public List<int> DirectorID { get; set; }
-        public List<int> CountryID { get; set; }
+        //public List<int> DirectorID { get; set; }
+        //public List<int> CountryID { get; set; }
 
         //Navigation properties
         public virtual List<Director> Director { get; set; }
         public virtual List<Country> Country { get; set; }
         public virtual List<TimeSlot> Slots { get; set; }
         public virtual List<Venue> Venues { get; set; }
-        public virtual List<ImagePath> Images { get; set; }
-
-
     }
 }

@@ -50,6 +50,7 @@ namespace LIFF.Web.Mappings
             CreateMap<ImagePath, ImagePathViewModel>();
             CreateMap<TimeSlot, TimeSlotViewModel>();
             CreateMap<Venue, VenueViewModel>();
+            CreateMap<NewsItem, NewsItemViewModel>();
             //IMapper mapper = config.CreateMapper();
             //var source = new Country();
             //var dest = mapper.Map<Country, CountryViewModel>(source);

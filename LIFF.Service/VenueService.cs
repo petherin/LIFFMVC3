@@ -12,7 +12,7 @@ namespace LIFF.Service
     public interface IVenueService
     {
         IEnumerable<Venue> GetVenues();
-        IEnumerable<Venue> GetVenuesByFilm(int filmId);
+       // IEnumerable<Venue> GetVenuesByFilm(int filmId);
         Venue GetVenue(int id);
         void CreateVenue(Venue venue);
         void SaveVenue();
@@ -29,7 +29,7 @@ namespace LIFF.Service
             this.unitOfWork = unitOfWork;
         }
 
-        #region ITimeSlotService Members
+        #region IVenueService Members
         public void CreateVenue(Venue venue)
         {
             venueRepository.Add(venue);
@@ -47,11 +47,11 @@ namespace LIFF.Service
             return venue;
         }
 
-        public IEnumerable<Venue> GetVenuesByFilm(int filmId)
-        {
-            var venues = venueRepository.GetVenuesByFilm(filmId);
-            return venues;
-        }
+        //public IEnumerable<Venue> GetVenuesByFilm(int filmId)
+        //{
+        //    var venues = venueRepository.GetVenuesByFilm(filmId);
+        //    return venues;
+        //}
 
         public void SaveVenue()
         {

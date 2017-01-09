@@ -12,17 +12,17 @@ namespace LIFF.Data.Repositories
     {
         public VenueRepository(IDbFactory dbFactory) : base(dbFactory) { }
 
-        public IEnumerable<Venue> GetVenuesByFilm(int filmId)
-        {
-            var film = this.DbContext.Films.Where(f => f.FilmId == filmId).FirstOrDefault();
-            var venues = this.DbContext.Venues.Where(v => v.Films.Contains(film)).ToList();
+        //public IEnumerable<Venue> GetVenuesByFilm(int filmId)
+        //{
+        //    var film = this.DbContext.Films.Where(f => f.FilmId == filmId).FirstOrDefault();
+        //    var venues = this.DbContext.Venues.Where(v => v.Films.Contains(film)).ToList();
 
-            return venues;
-        }
+        //    return venues;
+        //}
     }
 
     public interface IVenueRepository : IRepository<Venue>
     {
-        IEnumerable<Venue> GetVenuesByFilm(int filmId);
+        //IEnumerable<Venue> GetVenuesByFilm(int filmId);
     }
 }

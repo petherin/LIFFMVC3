@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VenueService.cs" />
+    <Compile Include="NewsItemService.cs" />
     <Compile Include="TimeSlotService.cs" />
+    <Compile Include="VenueService.cs" />
     <Compile Include="ImagePathService.cs" />
     <Compile Include="FilmService.cs" />
     <Compile Include="DirectorService.cs" />

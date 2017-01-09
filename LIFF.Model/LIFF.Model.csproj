@@ -42,10 +42,11 @@
   <ItemGroup>
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\NewsItem.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\ImagePath.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\TimeSlot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Venue.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

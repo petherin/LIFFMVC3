@@ -15,17 +15,17 @@ namespace LIFF.Web.ViewModels
         public string TrailerURL { get; set; }
         public int RunningTime { get; set; }
         public bool Subtitles { get; set; }
-        public List<ImagePathViewModel> Images { get; set; }
+        public string Certificate { get; set; }
 
         //Foreign keys
-        public List<int> DirectorID { get; set; }
-        public List<int> CountryID { get; set; }
+        //public List<int> DirectorID { get; set; }
+        //public List<int> CountryID { get; set; }
 
         //Navigation properties
-        //public virtual List<DirectorViewModel> Director { get; set; }
-        //public virtual List<CountryViewModel> Country { get; set; }
-        //public virtual List<TimeSlotViewModel> Slots { get; set; }
-        //public virtual List<VenueViewModel> Venues { get; set; }
-        //public virtual List<ImagePathViewModel> Images { get; set; }
+        public virtual List<DirectorViewModel> Director { get; set; }
+        public virtual List<CountryViewModel> Country { get; set; }
+        public virtual List<TimeSlotViewModel> Slots { get; set; }
+        public virtual List<VenueViewModel> Venues { get; set; }
+        public virtual List<ImagePathViewModel> Images { get; set; }
     }
 }

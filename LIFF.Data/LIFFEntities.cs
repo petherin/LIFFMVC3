@@ -19,6 +19,7 @@ namespace LIFF.Data
         public DbSet<TimeSlot> Slots { get; set; }
         public DbSet<Venue> Venues { get; set; }
         public DbSet<ImagePath> ImagePaths { get; set; }
+        public DbSet<NewsItem> NewsItems { get; set; }
 
         public virtual void Commit()
         {
@@ -33,6 +34,7 @@ namespace LIFF.Data
             modelBuilder.Configurations.Add(new ImagePathConfiguration());
             modelBuilder.Configurations.Add(new TimeSlotConfiguration());
             modelBuilder.Configurations.Add(new VenueConfiguration());
+            modelBuilder.Configurations.Add(new NewsItemConfiguration());
         }
     }
 }

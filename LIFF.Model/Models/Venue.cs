@@ -13,6 +13,6 @@ namespace LIFF.Model
 
         //Navigation properties
         public virtual List<TimeSlot> Slots { get; set; }
-        public virtual List<Film> Films { get; set; }
+     //   public virtual List<Film> Films { get; set; }
     }
 }

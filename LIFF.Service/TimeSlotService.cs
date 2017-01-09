@@ -12,8 +12,8 @@ namespace LIFF.Service
     public interface ITimeSlotService
     {
         IEnumerable<TimeSlot> GetTimeSlots();
-        IEnumerable<TimeSlot> GetTimeSlotsByDirector(int directorId);
-        IEnumerable<TimeSlot> GetTimeSlotsByCountry(int countryId);
+        //IEnumerable<TimeSlot> GetTimeSlotsByDirector(int directorId);
+        //IEnumerable<TimeSlot> GetTimeSlotsByCountry(int countryId);
         TimeSlot GetTimeSlot(int id);
         void CreateTimeSlot(TimeSlot timeSlot);
         void SaveTimeSlot();
@@ -48,17 +48,17 @@ namespace LIFF.Service
             return timeSlot;
         }
 
-        public IEnumerable<TimeSlot> GetTimeSlotsByDirector(int directorId)
-        {
-            var timeSlots = timeSlotRepository.GetTimeSlotsByDirector(directorId);
-            return timeSlots;
-        }
+        //public IEnumerable<TimeSlot> GetTimeSlotsByDirector(int directorId)
+        //{
+        //    var timeSlots = timeSlotRepository.GetTimeSlotsByDirector(directorId);
+        //    return timeSlots;
+        //}
 
-        public IEnumerable<TimeSlot> GetTimeSlotsByCountry(int countryId)
-        {
-            var timeSlots = timeSlotRepository.GetTimeSlotsByCountry(countryId);
-            return timeSlots;
-        }
+        //public IEnumerable<TimeSlot> GetTimeSlotsByCountry(int countryId)
+        //{
+        //    var timeSlots = timeSlotRepository.GetTimeSlotsByCountry(countryId);
+        //    return timeSlots;
+        //}
 
         public void SaveTimeSlot()
         {

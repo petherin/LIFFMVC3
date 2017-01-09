@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LIFF.Data
 {
-    public class LIFFSeedData : DropCreateDatabaseIfModelChanges<LIFFEntities>
+    public class LIFFSeedData : DropCreateDatabaseAlways<LIFFEntities>
     {
         protected override void Seed(LIFFEntities context)
         {
@@ -25,8 +25,8 @@ namespace LIFF.Data
         {
             return new List<Country>
             {
-                new Country {  CountryId = 1, Name = "UK" },
-                new Country { CountryId = 2, Name = "USA" }
+                new Country { CountryId=1, Name = "UK" },
+                new Country { CountryId=2, Name = "USA" }
             };
         }
 
@@ -34,8 +34,8 @@ namespace LIFF.Data
         {
             return new List<Venue>
             {
-                new Venue { Name = "Victoria Hall" },
-                new Venue { Name = "Vue The Light" }
+                new Venue { VenueId=1, Name = "Victoria Hall" },
+                new Venue { VenueId=2,Name = "Vue The Light" }
             };
         }
 
@@ -43,8 +43,8 @@ namespace LIFF.Data
         {
             return new List<Director>
             {
-                new Director { Name = "Stanley Kubrick" },
-                new Director { Name = "George Lucas" }
+                new Director {DirectorId=1, Name = "Stanley Kubrick" },
+                new Director {DirectorId=2, Name = "George Lucas" }
             };
         }
 
@@ -76,7 +76,8 @@ namespace LIFF.Data
                 RunningTime = 121,
                 Subtitles = false,
                 Images = new List<ImagePath>(),
-                Venues = new List<Venue>()
+                Venues = new List<Venue>(),
+                Certificate = "U"
             };
 
             Film film2 = new Film
@@ -90,7 +91,8 @@ namespace LIFF.Data
                 RunningTime = 116,
                 Subtitles = false,
                 Images = new List<ImagePath>(),
-                Venues = new List<Venue>()
+                Venues = new List<Venue>(),
+                Certificate = "U"
             };
 
             List<ImagePath> images = GetImagePaths();
@@ -101,7 +103,7 @@ namespace LIFF.Data
             film1.Images.AddRange(images.Where(i => i.ImagePathId >= 1 && i.ImagePathId <= 3).ToList());
             film2.Images.AddRange(images.Where(i => i.ImagePathId >= 4 && i.ImagePathId <= 6).ToList());
 
-            film1.Country.AddRange(countries.Where(c => c.CountryId == 1).ToList());
+            film1.Country.AddRange(countries.Where(c => c.CountryId == 1 || c.CountryId == 2).ToList());
             film2.Country.AddRange(countries.Where(c => c.CountryId == 2).ToList());
 
             film1.Director.AddRange(directors.Where(c => c.DirectorId == 1).ToList());

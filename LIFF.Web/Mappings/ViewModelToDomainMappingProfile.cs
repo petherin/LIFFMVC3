@@ -50,6 +50,7 @@ namespace LIFF.Web.Mappings
            CreateMap<ImagePathViewModel, ImagePath>();
            CreateMap<TimeSlotViewModel, TimeSlot>();
             CreateMap<VenueViewModel, Venue>();
+            CreateMap<NewsItemViewModel, NewsItem>();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace LIFF.Web.ViewModels
         public string Name { get; set; }
 
         //Navigation properties
-        public virtual List<TimeSlotViewModel> Slots { get; set; }
-        public virtual List<FilmViewModel> Films { get; set; }
+     //   public virtual List<TimeSlotViewModel> Slots { get; set; }
+      //  public virtual List<FilmViewModel> Films { get; set; }
     }
 }

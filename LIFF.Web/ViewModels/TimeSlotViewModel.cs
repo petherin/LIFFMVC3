@@ -18,7 +18,7 @@ namespace LIFF.Web.ViewModels
         public int VenueID { get; set; }
 
         //Navigation properties
-        public virtual FilmViewModel Film { get; set; }
-        public virtual VenueViewModel Venue { get; set; }
+        //public virtual FilmViewModel Film { get; set; }
+        //public virtual VenueViewModel Venue { get; set; }
     }
 }

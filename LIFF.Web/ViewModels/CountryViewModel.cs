@@ -11,7 +11,7 @@ namespace LIFF.Web.ViewModels
         public int CountryId { get; set; }
         public string Name { get; set; }
 
-        ////Navigation properties
-        public virtual List<FilmViewModel> Films { get; set; }
+        //Navigation properties
+       // public virtual List<FilmViewModel> Films { get; set; }
     }
 }

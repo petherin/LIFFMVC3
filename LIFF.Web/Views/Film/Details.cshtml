@@ -1,0 +1,57 @@
+﻿@model LIFF.Web.ViewModels.FilmViewModel
+
+@{
+    ViewBag.Title = "Films";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header {
+    <div class="col-sm-12" id="header">
+        <div class="jumbotron">
+            <div class="media">
+                <div class="media-left">
+                      <img class="media-object" src="@Url.Content(Model.Images[0].Path)" />
+                   <p> 
+                       <h2 class="media-heading">@Html.DisplayFor(model => model.Title) (@Html.DisplayFor(model => model.Year)) </h2>
+              </p>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-body">
+                        <p>Countries: 
+                            @for (var i = 0; i < Model.Country.Count; i++)
+                            {
+                                if (i > 0)
+                                {
+                                    <text>, </text>
+                                }
+                                @Html.DisplayFor(m => Model.Country[i].Name)
+                            }
+                            </p>
+                        <p>
+                            Director:
+                            @for (var i = 0; i < Model.Director.Count; i++)
+                            {
+                                if (i > 0)
+                                {
+                                    <text>, </text>
+                                }
+                                @Html.DisplayFor(m => Model.Director[i].Name)
+                            }
+                        </p>
+                        <p>Running Time: @Html.DisplayFor(model => model.RunningTime) mins</p>
+                        <p>Cerificate: @Html.DisplayFor(model => model.Certificate)</p>
+                        <p>@Html.DisplayFor(model => model.Description)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
